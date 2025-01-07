@@ -1,0 +1,126 @@
+@use '../scss/font';
+@use '../scss/variable';
+@import '../scss/mixing';
+
+.city-wrapper{
+    @include wrapper;
+    min-height: 100vh;
+    background: url(../../assets/image/home/alghero.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .city-container{
+        @include container(1000px, 500px);
+        @include flexbox(flex-start, flex-end);
+
+        &-content{
+            @include container(500px, 430px);
+            margin: 0;
+            @include flexbox(space-around, flex-start, column);
+            padding:0 20px;
+            text-align: justify;
+            background-color: variable.$background-section-light-grey;
+            border-radius: 4px;
+            .info{
+                @include info;
+            }
+
+            .heading{
+                @include h3;
+                color: variable.$text-light-white;
+            }
+
+            .ctaBtn{
+                @include cta-button;
+                max-width: 120px;
+                max-height: 50px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:500px){
+    .city-wrapper{
+        @include wrapper;
+        min-height: 90vh;
+        background: url(../../assets/image/home/alghero-s.webp);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+        .city-container{
+            @include container(400px, 500px);
+            @include flexbox(center, center);
+            padding: 10px;
+    
+    
+            &-content{
+                @include container(500px, 350px);
+                margin: 0;
+                @include flexbox(space-around, center, column);
+                padding: 0;
+                background-color: variable.$background-section-light-grey;
+                border-radius: 4px;
+
+                .info{
+                    @include info;
+                    font-size: 14px;
+                    text-align: center
+                }
+    
+                .heading{
+                    @include h3;
+                    font-size: 1.8rem;
+                    color: variable.$text-light-white;
+                }
+    
+                .ctaBtn{
+                    @include cta-button;
+                    font-weight: 200;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:501px) and (max-width:1000px){
+    .city-wrapper{
+        @include wrapper;
+        min-height: 90vh;
+        background: url(../../assets/image/home/alghero-m.webp);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+        .city-container{
+            @include container(900px, 500px);
+            @include flexbox(center, center);
+            padding: 10px;
+    
+    
+            &-content{
+                @include container(500px, 400px);
+                margin: 0;
+                @include flexbox(space-around, center, column);
+                padding: 0;
+                background-color: variable.$background-section-light-grey;
+                border-radius: 4px;
+
+                .info{
+                    @include info;
+                    text-align: center
+                }
+    
+                .heading{
+                    @include h3;
+                    color: variable.$text-light-white;
+                }
+    
+                .ctaBtn{
+                    @include cta-button;
+                }
+            }
+        }
+    }
+}

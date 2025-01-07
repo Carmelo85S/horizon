@@ -1,0 +1,42 @@
+@use '../scss/font';
+@use '../scss/variable';
+@import '../scss/mixing';
+
+.icon-wrapper{
+    @include wrapper;
+    min-height: 150px;
+    background-color: variable.$background-section-dark-grey;
+
+    .icon-container{
+        @include container;
+        min-height: 150px;
+        @include flexbox(center, center, row, wrap);
+
+        .icon-box{
+            @include container(300px, 200px);
+            @include flexbox(space-around, center, column);
+
+            .icon{
+                width: 150px;
+            }
+
+            p{
+                @include info;
+                font-size: 2.5rem;
+                color: variable.$text-light-white;
+            }
+
+            .right{
+                color: variable.$text-turquoise;
+            }
+
+            .center{
+                color: variable.$text-coral;
+            }
+
+            .left{
+                color: variable.$text-light-green;
+            }
+        }
+    }
+}

@@ -9,7 +9,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
+
     .why-container{
         @include container;
         @include flexbox(space-between, center, row, wrap);
@@ -48,6 +48,114 @@
 
             .img-bottom{
                 margin-left: auto;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width:500px){
+    .why-wrapper{
+        background: url(../../assets/image/home/why-us-bg-s.webp);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .why-container{
+            @include container;
+            @include flexbox(space-between, center, row, wrap);
+    
+            &-text{
+                @include container(600px, 400px);
+                @include flexbox(center);
+    
+                .heading{
+                    @include h3;
+                    font-size: 1.8rem;
+                    padding: 30px 0;;
+                    color: variable.$text-light-white;
+                }
+    
+                .info{
+                    @include info;
+                    font-size: 16px;
+                    padding: 10px 10px;
+                    text-align: justify;
+                }
+    
+                .ctaBtn{
+                    @include cta-button;
+                    margin: 20px 0;
+                }
+            }
+    
+            &-image{
+                @include container(500px, 450px);
+    
+                img{
+                    width: 300px;
+                    border-radius: 4px;
+                    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.267);
+                }
+    
+                .img-top{
+                    margin: auto;
+                }
+    
+                .img-bottom{
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width:1099px){
+    .why-wrapper{
+        background: url(../../assets/image/home/why-us-bg-m.webp);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .why-container{
+            @include container;
+            @include flexbox(space-between, center, row, wrap);
+    
+            &-text{
+                @include container(600px, 400px);
+                @include flexbox(center);
+                .heading{
+                    @include h3;
+                    color: variable.$text-light-white;
+                }
+    
+                .info{
+                    @include info;
+                    padding: 0 10px;
+                    text-align: justify;
+                }
+    
+                .ctaBtn{
+                    @include cta-button;
+                }
+            }
+    
+            &-image{
+                @include flexbox(space-between, center, wrap);
+                @include container(1000px, 250px);
+                gap:10px;
+    
+                img{
+                    width: 300px;
+                    border-radius: 4px;
+                    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.267);
+                }
+    
+                .img-top{
+                    margin: auto;
+                }
+    
+                .img-bottom{
+                    margin: auto;
+                }
             }
         }
     }
