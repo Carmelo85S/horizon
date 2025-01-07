@@ -1,0 +1,54 @@
+@use '../scss/font';
+@use '../scss/variable';
+@import '../scss/mixing';
+
+.why-wrapper{
+    @include wrapper;
+    min-height: 700px;
+    background: url(../../assets/image/home/why-us-bg.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    .why-container{
+        @include container;
+        @include flexbox(space-between, center, row, wrap);
+
+        &-text{
+            @include container(600px, 400px);
+            @include flexbox(space-between);
+            .heading{
+                @include h3;
+                color: variable.$text-light-white;
+            }
+
+            .info{
+                @include info;
+               @include flexbox(space-between, flex-start, column);
+            }
+
+            .ctaBtn{
+                @include cta-button;
+            }
+        }
+
+        &-image{
+            @include container(500px, 600px);
+            @include flexbox($align-items:center);
+
+            img{
+                width: 400px;
+                border-radius: 4px;
+                box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.267);
+            }
+
+            .img-top{
+                margin-right: auto;
+            }
+
+            .img-bottom{
+                margin-left: auto;
+            }
+        }
+    }
+}
