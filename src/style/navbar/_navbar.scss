@@ -8,7 +8,7 @@
     background-color: variable.$background-header-dark-purple;
 
     .nav-container{
-        @include container($min-height: 80px);
+        @include container(1200px, 80px);
         @include flexbox(space-between, center, row);
         .logo{
             @include logo-h2;

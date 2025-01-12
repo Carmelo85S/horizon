@@ -1,0 +1,104 @@
+@use '../scss/font';
+@use '../scss/variable';
+@import '../scss/mixing';
+
+.nature-wrapper{
+    @include wrapper;
+    background-image: url(../../assets/image/home/nature.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 20vh;
+    background-color: whitesmoke;
+
+    .nature-container{
+        @include container;
+        @include flexbox(center, center, column);
+
+        &-title{
+            @include container($min-height:100px);
+            @include flexbox(center, center);
+
+            .nature-heading{
+                @include h2;
+                color:variable.$text-main-dark
+            }
+        }
+    }
+
+    .nature-container-content{
+        @include container(1100px, 60vh);
+        @include flexbox(space-between, center, row, wrap);
+        
+        .nature-image{
+            @include container(400px, auto);
+            
+            img{
+                width: 400px;
+                border-radius: 4px;
+            }
+        }
+
+        &-info{
+            @include flexbox;
+            @include container(700px, 250px);
+
+
+            .info{
+                @include info;
+                color:variable.$text-main-dark;
+                text-align: justify;
+                padding: 0 20px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 500px){
+    .nature-wrapper{
+       
+        .nature-container{
+            @include container;
+            @include flexbox(center, center, column);
+    
+            &-title{
+                @include container($min-height:100px);
+                @include flexbox(center, center);
+    
+                .nature-heading{
+                    @include h2;
+                    font-size: 1.8rem;
+                    padding: 30px 0;
+                }
+            }
+        }
+    
+        .nature-container-content{
+            @include container(500px);
+            @include flexbox(space-between, center, row, wrap);
+            padding-bottom: 40px;
+            
+            .nature-image{
+                @include container(300px, auto);
+                img{
+                    width: 300px;
+                    border-radius: 4px;
+                }
+            }
+    
+            &-info{
+                @include flexbox;
+                @include container(700px, 272px);
+    
+    
+                .info{
+                    @include info;
+                    font-size: 16px;
+                    padding: 10px 10px;
+                    color:variable.$text-main-dark;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+}

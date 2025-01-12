@@ -7,9 +7,9 @@ const WhyUs = () => {
     <section className="why-wrapper">
       <section className="why-container">
         <section className="why-container-text">
-          <h3 className="heading">
+          <h2 className="heading">
             Why Choose Us
-          </h3>
+          </h2>
           <p className="info">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nobis corporis ipsum et quia enim sit adipisci corrupti. Quos nulla quis, fugit eum officia a itaque. Obcaecati deserunt debitis vel.
           </p>
