@@ -3,6 +3,7 @@
 @import '../scss/mixing';
 
 .footer-wrapper{
+    padding-top:50px;
     @include wrapper;
     min-height: 250px;
     background-color: #4452eb;
