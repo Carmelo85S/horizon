@@ -1,0 +1,45 @@
+@use '../scss/font';
+@use '../scss/variable';
+@import '../scss/mixing';
+
+.footer-wrapper{
+    @include wrapper;
+    min-height: 250px;
+    background-color: #4452eb;
+
+    .footer-container{
+        @include container(300px, 100px);
+        @include flexbox(center, center, column);
+        margin: auto;
+
+        .footer-heading{
+            @include h2; 
+            color: variable.$text-light-white;
+        }
+
+        .footer-info{
+            @include info;
+        }
+
+        .icon-container{
+            @include container(300px, 100px);
+            @include flexbox(space-around, center);
+
+            .icon{
+                color: white;
+                transition: 0.2s ease;
+                cursor: pointer;
+
+                &:hover{
+                    color: variable.$text-link-hover;
+                    transform: scale(1.05);
+                }
+
+                &:active{
+                    color: variable.$text-light-green;
+                    transform: scale(0.98);
+                }
+            }
+        }
+    }
+}

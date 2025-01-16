@@ -6,6 +6,7 @@ import City from "../../components/city/City"
 import Panorama from "../../components/panorama/Panorama"
 import Nature from "../../components/nature/Nature"
 import Contact from "../../components/contact-form/Contact"
+import Footer from "../../components/footer/Footer"
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <Panorama />
       <Nature />
       <Contact />
+      <Footer />
     </div>
   )
 }
